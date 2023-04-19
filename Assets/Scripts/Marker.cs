@@ -33,7 +33,7 @@ public class Marker : MonoBehaviour
         _pixelArea = Mathf.FloorToInt(Mathf.PI * Mathf.Pow(_tipSize, 2));
         _colors = Enumerable.Repeat(_renderer.material.color, _pixelArea).ToArray();
 
-        _tipHeight = _markerTip.localScale.y - _markerTip.localScale.y/ 8; // since most of the capsule is inside the marker, currently
+        _tipHeight = _markerTip.localScale.y; // since most of the capsule is inside the marker, currently
 
     }
 
@@ -62,7 +62,7 @@ public class Marker : MonoBehaviour
             {
                 _whiteboard.texture.SetPixels(x, y, _tipSize, _tipSize, _colors);
 
-                for (float f = 0.01f; f < 1.00f; f += 0.01f)
+                for (float f = 0.01f; f < 1.00f; f += 0.005f)
                 {
                     var lerpX = (int)Mathf.Lerp(_lastDrawPos.x, x, f);
                     var lerpY = (int)Mathf.Lerp(_lastDrawPos.y, y, f);

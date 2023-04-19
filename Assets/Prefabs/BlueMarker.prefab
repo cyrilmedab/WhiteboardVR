@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7059177899754931021, guid: 794c68b527427d943a713577caa5dc91, type: 3}
       propertyPath: m_VersionIndex
-      value: 1761
+      value: 1887
       objectReference: {fileID: 0}
     - target: {fileID: 7059177899847836080, guid: 794c68b527427d943a713577caa5dc91, type: 3}
       propertyPath: m_Name
-      value: Marker
+      value: BlueMarker
       objectReference: {fileID: 0}
     - target: {fileID: 7059177899847836083, guid: 794c68b527427d943a713577caa5dc91, type: 3}
       propertyPath: m_RootOrder
