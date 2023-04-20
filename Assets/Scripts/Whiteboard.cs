@@ -15,6 +15,19 @@ public class Whiteboard : MonoBehaviour
         texture = new Texture2D((int)textureSize.x, (int)textureSize.y);
         _renderer = GetComponent<Renderer>();
         _renderer.material.mainTexture = texture;
+
+        var colors = new Color32[1];
+        colors[0] = _renderer.material.color;
+        
+        var cols = texture.GetPixels32(0);
+        for (int i = 0; i < cols.Length; i++)
+        {
+            cols[i] = colors[0];
+        }
+        texture.SetPixels32(cols, 0);
+
+
+        texture.Apply();
     }
 
     // Update is called once per frame
